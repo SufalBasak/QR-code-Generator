@@ -1,0 +1,112 @@
+/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #00796b;
+  animation: pop 1s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #b2dfdb;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 10px 5px;
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-size 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #004d40, #00796b);
+  transform: scale(1.05);
+}
+
+#qrcode {
+  margin-top: 25px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+}
